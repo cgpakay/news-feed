@@ -1,6 +1,7 @@
 import DisplayNews from "./components/DisplayNews"
 import ResponsiveAppBar from "./components/ResponsiveAppBar"
 import { useState, useEffect } from 'react'
+import Footer from "./components/Footer"
 
 
 
@@ -35,6 +36,8 @@ function App() {
     <ResponsiveAppBar />
       <p>Hello from App.jsx</p>
         {newsfeed.map((news) => <DisplayNews key={news.story_id} {...news} /> )}  
+        <hr />
+        <Footer/>
       </>
     )
   }
