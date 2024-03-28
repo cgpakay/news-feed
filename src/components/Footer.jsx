@@ -4,12 +4,14 @@ import { TextField } from '@mui/material'
 
 const Footer = ({searchCallbackFn}) => {
     const[searchInput, setSearchInput] = useState('')
+    let searchInputValue ;
 
     console.log(searchCallbackFn)
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        searchCallbackFn(searchInput)
+        searchCallbackFn(searchInputValue)
+        setSearchInput('')
     }
 
 
@@ -29,8 +31,8 @@ const Footer = ({searchCallbackFn}) => {
 
             <form action="" onSubmit={handleSubmit} className='search'>
                 <div className='search-box'>
-                     <p>Search: </p>
-                    <input type="text" onChange={e =>setSearchInput(e.target.value)} />
+                    <p>Search: </p>
+                    <input type="text" value={searchInput} onChange={e =>( searchInputValue = e.target.value  )} />
                     {/* <TextField id="outlined-basic" variant="outlined" onChange={e =>setSearchInput(e.target.value)} /> */}
                 </div>
             </form>
