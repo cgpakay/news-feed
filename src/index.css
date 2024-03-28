@@ -1,8 +1,33 @@
 * {
   margin: 0;
-	padding: 0;
+	/* padding: 0; */
 	border: 0;
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+
+}
+
+.body{
+	/* margin: 0 10rem; */
+	padding: 0.5rem;
+	background-color: azure;
+
+}
+
+.footer{
+	background-color: #1976D2;
+	color : white;
+	display : flex;
+	padding: 2rem;
+	justify-content: space-around;
+}
+
+.footer a{
+	text-decoration: none;
+	color: white;
+}
+
+.footer #search{
+	
 }

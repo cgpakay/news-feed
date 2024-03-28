@@ -13,7 +13,7 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 
-const pages = ['Products', 'Pricing', 'Blog'];
+const pages = ['New', ' Past', 'Comment', 'ask', 'show', 'jobs', 'submit'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function ResponsiveAppBar() {
@@ -48,14 +48,14 @@ function ResponsiveAppBar() {
                 sx={{
                 mr: 2,
                 display: { xs: 'none', md: 'flex' },
-                fontFamily: 'monospace',
+                fontFamily: 'Roboto',
                 fontWeight: 700,
-                letterSpacing: '.3rem',
+                // letterSpacing: '.3rem',
                 color: 'inherit',
                 textDecoration: 'none',
                 }}
             >
-                LOGO
+                Hacker News
             </Typography>
 
             <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>

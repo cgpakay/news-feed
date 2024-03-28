@@ -1,8 +1,21 @@
 import React from 'react'
+import { useState } from 'react'
+import { TextField } from '@mui/material'
 
-const Footer = () => {
+const Footer = ({searchCallbackFn}) => {
+    const[searchInput, setSearchInput] = useState('')
+
+    console.log(searchCallbackFn)
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        searchCallbackFn(searchInput)
+    }
+
+
     return (
-        <div>
+        <div className='footer'>
+            <hr />
             <ul>
                 <a href="https://news.ycombinator.com/newsguidelines.html" target="_blank">Guidelines</a>
                 <a href=""> | FAQ</a> 
@@ -14,10 +27,12 @@ const Footer = () => {
                 <a href=""> | Contact</a>
             </ul>
 
-            <form action="">
-                <label htmlFor="" value ="Search:" name ="Search :">
-                <input type="text" value= "search"/>
-                </label>
+            <form action="" onSubmit={handleSubmit} className='search'>
+                <div >
+                    Search :
+                    {/* <input type="text" onChange={e =>setSearchInput(e.target.value)} /> */}
+                    <TextField id="outlined-basic" variant="outlined" onChange={e =>setSearchInput(e.target.value)} />
+                </div>
             </form>
         </div>
     )
