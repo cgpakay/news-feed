@@ -18,20 +18,20 @@ const Footer = ({searchCallbackFn}) => {
             <hr />
             <ul>
                 <a href="https://news.ycombinator.com/newsguidelines.html" target="_blank">Guidelines</a>
-                <a href=""> | FAQ</a> 
-                <a href=""> | Lists</a>
-                <a href=""> | API</a>
-                <a href=""> | Security</a>
-                <a href=""> | Legal</a>
-                <a href=""> | Apply to YC </a>
-                <a href=""> | Contact</a>
+                <a href="">  FAQ</a> 
+                <a href="">  Lists</a>
+                <a href="">  API</a>
+                <a href="">  Security</a>
+                <a href="">  Legal</a>
+                <a href="">  Apply to YC </a>
+                <a href="">  Contact</a>
             </ul>
 
             <form action="" onSubmit={handleSubmit} className='search'>
-                <div >
-                    Search :
-                    {/* <input type="text" onChange={e =>setSearchInput(e.target.value)} /> */}
-                    <TextField id="outlined-basic" variant="outlined" onChange={e =>setSearchInput(e.target.value)} />
+                <div className='search-box'>
+                     <p>Search: </p>
+                    <input type="text" onChange={e =>setSearchInput(e.target.value)} />
+                    {/* <TextField id="outlined-basic" variant="outlined" onChange={e =>setSearchInput(e.target.value)} /> */}
                 </div>
             </form>
         </div>

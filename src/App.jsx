@@ -8,10 +8,8 @@ import Footer from "./components/Footer"
 function App() {
   
   const [newsfeed, setNewsFeed] = useState([]);
-  // const[count, setCount] =useState(0)
 
   let inputValue;
-  // let countResult;
   
   const fetchDataWrapper =  async() =>{
       try {
@@ -33,12 +31,9 @@ function App() {
           console.warn(error);
       }
   }
-      // countResult= count+countResult;
 
   useEffect(() =>{ 
         fetchDataWrapper()
-        // setCount(countResult)
-        // countResult = count + countResult
   }, [])
 
   function handleInputfromSearch(footerSearchInput) {
@@ -50,7 +45,7 @@ function App() {
     return (
     <>
     <ResponsiveAppBar />
-        {newsfeed.map((news) => <DisplayNews key={news.story_id} {...news} /> )}  
+        {newsfeed.map((news, index) => <DisplayNews key={news.story_id} {...news} count ={index+1} /> )}  
         <Footer searchCallbackFn = {handleInputfromSearch}/>
       </>
     )
